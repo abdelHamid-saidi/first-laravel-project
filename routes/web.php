@@ -8,5 +8,5 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/article/{id}', [ArticleController::class, 'show']);
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/article/{id}', [ArticleController::class, 'show'])->name('article.details');
