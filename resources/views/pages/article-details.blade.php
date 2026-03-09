@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Bienvenue sur le site de {{ $name }}</h1>
+<h1>Article portant l’identifiant {{ $id }}</h1>
 @endsection
