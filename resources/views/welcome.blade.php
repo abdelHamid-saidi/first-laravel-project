@@ -3,5 +3,5 @@
 @section('title', 'Accueil')
 
 @section('content')
-<h1>Bienvenue sur le site de {{ $name }}</h1>
+<h2>Bienvenue sur le site de {{ $name }}</h2>
 @endsection
