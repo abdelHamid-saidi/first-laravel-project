@@ -13,6 +13,7 @@
     @endif
 
     <x-article
+      :id="$article['id']"
       :title="$article['title']"
       :description="Str::limit($article['description'], 30)" />
 

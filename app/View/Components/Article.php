@@ -8,14 +8,16 @@ use Illuminate\View\Component;
 
 class Article extends Component
 {
+    public $id;
     public $title;
     public $description;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($title, $description)
+    public function __construct($id, $title, $description)
     {
+        $this->id = $id;
         $this->title = $title;
         $this->description = $description;
     }
