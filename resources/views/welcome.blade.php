@@ -14,7 +14,7 @@
 
 <x-article
   :title="$article['title']"
-  :description="$article['description']" />
+  :description="Str::limit($article['description'], 30)" />
 
 @empty
 
