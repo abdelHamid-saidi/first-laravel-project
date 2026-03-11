@@ -11,12 +11,13 @@
     @if ($loop->last)
       @break
     @endif
- 
-    <x-article 
-      :id="$article->id" 
-      :title="$article->title" 
-      :description="Str::limit($article->description, 30)"
-    />
+
+    <a href="{{ route('articles.show', $article->id) }}">
+      <x-article 
+        :title="$article->title" 
+        :description="Str::limit($article->description, 30)"
+      />
+    </a>
     
     @empty
 
