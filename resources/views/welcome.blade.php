@@ -4,22 +4,22 @@
 
 @section('content')
 
-<h2>Bienvenue sur le site de {{ $name }}</h2>
+  <h2>Bienvenue sur le site de {{ $name }}</h2>
 
-@forelse ($articles as $article)
+  @forelse ($articles as $article)
 
-@if ($loop->last)
-@break
-@endif
+    @if ($loop->last)
+      @break
+    @endif
 
-<x-article
-  :title="$article['title']"
-  :description="Str::limit($article['description'], 30)" />
+    <x-article
+      :title="$article['title']"
+      :description="Str::limit($article['description'], 30)" />
 
-@empty
+    @empty
 
-<p>Aucun article pour le moment.</p>
+    <p>Aucun article pour le moment.</p>
 
-@endforelse
+  @endforelse
 
 @endsection
